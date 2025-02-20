@@ -1,0 +1,92 @@
+.btn-start,
+.score_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50);
+    
+}
+.quiz_box.active{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+.quiz_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50);
+    width: 550px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.7);  /* animasyon satırı 21 22 ve 11 aynı zamanda 21 ve 11 bağlantılı timer gibi */
+    transition: all 2s ease;
+}
+.quiz_box header .title{
+    font-size: 20px;
+    font-weight: 600;
+    color: blue;
+}
+.quiz_box .question-text{
+    font-size: 25px;
+    font-weight: 600;
+}
+.quiz_box .option-list{
+    padding: 18px 0;
+}
+.quiz_box .option-list .option{
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    display: flex; /* icon ve şıkkı birini sağa birini sola alır */
+    align-items: center;
+    justify-content: space-between;
+}
+.quiz_box .option-list .option:hover{
+    color: black;
+    background-color: yellow;
+}
+.quiz_box .option-list .option.correct{
+    color: darkgreen;
+    background-color: aqua;
+}
+.quiz_box .option-list .option.incorrect{
+    color: darkred;
+    background-color: red;
+}
+.quiz_box .option-list .option.disabled{
+    pointer-events: none;
+}
+.quiz_box .next-btn{
+    opacity: 0;
+    pointer-events: none;
+}
+.quiz_box .next-btn.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+.quiz_box .footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.score_box.active{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+.score_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50);
+    width: 550px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.7);  /* animasyon satırı 21 22 ve 11 aynı zamanda 21 ve 11 bağlantılı timer gibi */
+    transition: all 2s ease;
+}
